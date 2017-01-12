@@ -1,29 +1,64 @@
-beds.register_bed("straw_bed:straw_bed",{
-    description = "Straw bed",
-    inventory_image = "straw_bed.png",
-    wield_image = "straw_bed.png",
+beds.register_bed("grass_beds:dry_grass_bed",{
+    description = "Dry grass bed",
+    inventory_image = "dry_grass_bed.png",
+    wield_image = "dry_grass_bed.png",
     sounds = default.node_sound_leaves_defaults(),
     nodebox = {
         bottom = {-0.5,-0.5,-0.5,0.5,-0.49,0.5},
         top = {-0.5,-0.5,-0.5,0.5,-0.49,0.5}
     },
-    selectionbox = {-0.5,-0.5,-0.5,0.5,-0.49,1.5},
+    selectionbox = {-0.5,-0.5,-0.5,0.5,-0.45,1.5},
     tiles = {
         bottom = {
-            "straw_bed_bottom.png",
-            "straw_bed_bottom.png",
-            "straw_bed_side.png",
-            "straw_bed_side.png",
-            "straw_bed_side.png",
-            "straw_bed_side.png"
+            "dry_grass_bed_bottom.png",
+            "dry_grass_bed_top.png",
+            "grass_bed_side.png",
+            "grass_bed_side.png",
+            "grass_bed_side.png",
+            "grass_bed_side.png"
         },
         top = {
-            "straw_bed_top.png",
-            "straw_bed_top.png",
-            "straw_bed_side.png",
-            "straw_bed_side.png",
-            "straw_bed_side.png",
-            "straw_bed_side.png"
+            "dry_grass_bed_top.png",
+            "dry_grass_bed_bottom.png",
+            "grass_bed_side.png",
+            "grass_bed_side.png",
+            "grass_bed_side.png",
+            "grass_bed_side.png"
+        }
+    },
+    recipe = {
+        {"group:dry_grass","group:dry_grass","group:dry_grass"},
+        {"group:dry_grass","group:dry_grass","group:dry_grass"}
+    }
+})
+
+
+beds.register_bed("grass_beds:grass_bed",{
+    description = "Grass bed",
+    inventory_image = "grass_bed.png",
+    wield_image = "grass_bed.png",
+    sounds = default.node_sound_leaves_defaults(),
+    nodebox = {
+        bottom = {-0.5,-0.5,-0.5,0.5,-0.49,0.5},
+        top = {-0.5,-0.5,-0.5,0.5,-0.49,0.5}
+    },
+    selectionbox = {-0.5,-0.5,-0.5,0.5,-0.45,1.5},
+    tiles = {
+        bottom = {
+            "grass_bed_bottom.png",
+            "grass_bed_top.png",
+            "grass_bed_side.png",
+            "grass_bed_side.png",
+            "grass_bed_side.png",
+            "grass_bed_side.png"
+        },
+        top = {
+            "grass_bed_top.png",
+            "grass_bed_bottom.png",
+            "grass_bed_side.png",
+            "grass_bed_side.png",
+            "grass_bed_side.png",
+            "grass_bed_side.png"
         }
     },
     recipe = {
@@ -32,10 +67,4 @@ beds.register_bed("straw_bed:straw_bed",{
     }
 })
 
-minetest.register_craft({
-    output = "straw_bed:straw_bed",
-    recipe = {
-        {"group:grass","group:grass","group:grass"},
-        {"group:grass","group:grass","group:grass"}
-    }
-})
+
