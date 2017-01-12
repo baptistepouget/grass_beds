@@ -16,3 +16,11 @@ beds.register_bed("straw_bed:straw_bed",{
         {"group:grass","group:grass","group:grass"}
     }
 })
+
+minetest.register_craft({
+    output = "straw_bed:straw_bed",
+    recipe = {
+        {"group:grass","group:grass","group:grass"},
+        {"group:grass","group:grass","group:grass"}
+    }
+})
